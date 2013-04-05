@@ -81,7 +81,7 @@ public class TwitterStreamingConsumer {
                     }
 
                     if (line.length() > 0) {
-                        targetBuffer.insert(
+                        targetBuffer.insertCached(
                             parseLogMessageFromTweet(parseTweetFromJson(line))
                         );
                     }
