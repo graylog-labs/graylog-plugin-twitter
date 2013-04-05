@@ -4,7 +4,7 @@
 
   <groupId>org.graylog2.twitterinput</groupId>
   <artifactId>graylog2-input-twitter</artifactId>
-  <version>0.10.0</version>
+  <version>0.11.0</version>
   <packaging>jar</packaging>
 
   <name>graylog2-input-twitter</name>
