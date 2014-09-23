@@ -121,6 +121,7 @@ public class TwitterInputTest {
         final TwitterStream mockTwitterStream = mock(TwitterStream.class);
         final TwitterInput input = new TwitterInput(mockTwitterStream);
         input.initialize(configuration);
+        input.setConfiguration(configuration);
         input.launch(processBuffer);
 
         ArgumentCaptor<FilterQuery> filterQueryArgument = ArgumentCaptor.forClass(FilterQuery.class);
@@ -156,6 +157,7 @@ public class TwitterInputTest {
                 "oauth_access_token_secret", "TEST_oauth_access_token_secret"
         ));
         twitterInput.initialize(configuration);
+        twitterInput.setConfiguration(configuration);
         final Map<String, Object> attributes = twitterInput.getAttributes();
 
         assertThat((String) attributes.get("oauth_consumer_secret"), equalTo("****"));
