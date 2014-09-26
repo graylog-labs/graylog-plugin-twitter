@@ -211,7 +211,6 @@ public class TwitterInput extends MessageInput {
 
         twitterStream.addListener(listener);
         twitterStream.filter(filterQuery);
-        twitterStream.sample();
     }
 
     @Override
