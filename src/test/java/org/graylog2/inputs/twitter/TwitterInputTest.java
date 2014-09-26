@@ -127,8 +127,6 @@ public class TwitterInputTest {
         ArgumentCaptor<FilterQuery> filterQueryArgument = ArgumentCaptor.forClass(FilterQuery.class);
         verify(mockTwitterStream).filter(filterQueryArgument.capture());
         assertThat(filterQueryArgument.getValue().toString(), containsString("track=[TEST_keywords1, TEST_keywords2]"));
-
-        verify(mockTwitterStream, times(1)).sample();
     }
 
     @Test
