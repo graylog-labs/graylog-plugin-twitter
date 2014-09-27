@@ -9,6 +9,6 @@ import java.util.Collections;
 public class TwitterInputPlugin implements Plugin {
     @Override
     public Collection<PluginModule> modules() {
-        return Collections.<PluginModule>singleton(new TwitterInputtModule());
+        return Collections.<PluginModule>singleton(new TwitterInputModule());
     }
 }
