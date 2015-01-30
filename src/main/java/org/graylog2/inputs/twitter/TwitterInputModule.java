@@ -5,7 +5,8 @@ import org.graylog2.plugin.PluginModule;
 public class TwitterInputModule extends PluginModule {
     @Override
     protected void configure() {
-        registerPlugin(TwitterInputMetadata.class);
+        addTransport("twitter", TwitterTransport.class);
+        addCodec("twitter", TwitterCodec.class);
         addMessageInput(TwitterInput.class);
     }
 }
