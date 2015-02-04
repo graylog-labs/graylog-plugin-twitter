@@ -21,12 +21,12 @@ public class TwitterInputMetadata implements PluginMetaData {
 
     @Override
     public String getAuthor() {
-        return "TORCH GmbH";
+        return "Graylog, Inc.";
     }
 
     @Override
     public URI getURL() {
-        return URI.create("http://www.torch.sh");
+        return URI.create("http://www.graylog.com");
     }
 
     @Override
