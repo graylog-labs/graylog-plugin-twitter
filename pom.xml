@@ -12,7 +12,7 @@
 
     <name>graylog-input-twitter</name>
     <description>Graylog Twitter Input plugin</description>
-    <url>https://www.graylog2.org</url>
+    <url>https://www.graylog.org</url>
 
     <licenses>
         <license>
@@ -25,8 +25,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
-        <graylog2.plugin-dir>/usr/share/graylog2-server/plugin</graylog2.plugin-dir>
-        <graylog2.version>1.0.0-rc.2</graylog2.version>
+        <graylog2.plugin-dir>/usr/share/graylog-server/plugin</graylog2.plugin-dir>
+        <graylog2.version>1.0.0</graylog2.version>
         <twitter4j.version>4.0.2</twitter4j.version>
     </properties>
 
