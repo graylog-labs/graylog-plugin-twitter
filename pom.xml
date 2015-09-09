@@ -5,12 +5,12 @@
         <maven>3.0</maven>
     </prerequisites>
 
-    <groupId>org.graylog</groupId>
-    <artifactId>graylog-input-twitter</artifactId>
+    <groupId>org.graylog.plugins</groupId>
+    <artifactId>graylog-plugin-twitter</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>graylog-input-twitter</name>
+    <name>graylog-plugin-twitter</name>
     <description>Graylog Twitter Input plugin</description>
     <url>https://www.graylog.org</url>
 
@@ -20,6 +20,13 @@
             <url>https://www.gnu.org/licenses/gpl-3.0</url>
         </license>
     </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:Graylog2/graylog-plugin-twitter.git</connection>
+        <developerConnection>scm:git:git@github.com:Graylog2/graylog-plugin-twitter.git</developerConnection>
+        <url>https://github.com/Graylog2/graylog-plugin-twitter</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -89,6 +96,19 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <mavenExecutorId>forked-path</mavenExecutorId>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <preparationGoals>clean test</preparationGoals>
+                    <goals>package</goals>
+                </configuration>
             </plugin>
 
             <plugin>

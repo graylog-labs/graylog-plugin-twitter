@@ -1,4 +1,27 @@
+sudo: false
 language: java
 jdk:
   - oraclejdk7
   - oraclejdk8
+addons:
+  apt:
+    packages:
+      - rpm
+before_deploy:
+  - mvn jdeb:jdeb && export RELEASE_DEB_FILE=$(ls target/*.deb)
+  - mvn rpm:rpm && export RELEASE_RPM_FILE=$(find target/ -name '*.rpm' | tail -1)
+  - rm -f target/original-*.jar
+  - export RELEASE_PKG_FILE=$(ls target/*.jar)
+  - echo "Deploying release to GitHub releases"
+deploy:
+  provider: releases
+  api_key:
+    secure: ELzOZrUvp7wjCHjbBpmIFkGF6IPSuIWU3+EshQZkXiX62mWTvz4wLKc66JGGCx4fRP8j4V4E3wrtFjiqRcZEdlMIJ6PQNidMe7oStgrm99ZM3YEEZAngdoGIbMplg05wW5pA0q7sVWjDZ0reB9jz5NFk1gAF2bM9n7G2zwH9Bl8=
+  file:
+    - "${RELEASE_PKG_FILE}"
+    - "${RELEASE_DEB_FILE}"
+    - "${RELEASE_RPM_FILE}"
+  skip_cleanup: true
+  on:
+    tags: true
+    jdk: oraclejdk7
