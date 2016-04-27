@@ -41,19 +41,15 @@ import twitter4j.User;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 @Codec(name = "twitter", displayName = "Twitter")
 public class TwitterCodec extends AbstractCodec {
     private static final Logger LOG = LoggerFactory.getLogger(TwitterCodec.class);
 
-    private final ObjectMapper objectMapper;
-
     @Inject
     public TwitterCodec(@Assisted Configuration configuration, ObjectMapper objectMapper) {
         super(configuration);
-        this.objectMapper = objectMapper;
     }
 
     @Nullable

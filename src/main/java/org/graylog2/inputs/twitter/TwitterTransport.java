@@ -19,7 +19,6 @@
 package org.graylog2.inputs.twitter;
 
 import com.codahale.metrics.MetricSet;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
 import com.google.inject.assistedinject.Assisted;
@@ -62,17 +61,14 @@ public class TwitterTransport implements Transport {
 
     private final Configuration configuration;
     private final LocalMetricRegistry localRegistry;
-    private final ObjectMapper objectMapper;
 
     private TwitterStream twitterStream;
 
     @AssistedInject
     public TwitterTransport(@Assisted Configuration configuration,
-                            LocalMetricRegistry localRegistry,
-                            ObjectMapper objectMapper) {
+                            LocalMetricRegistry localRegistry) {
         this.configuration = configuration;
         this.localRegistry = localRegistry;
-        this.objectMapper = objectMapper;
     }
 
 
