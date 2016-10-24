@@ -6,7 +6,7 @@
 
     <groupId>org.graylog.plugins</groupId>
     <artifactId>graylog-plugin-twitter</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>graylog-plugin-twitter</name>
@@ -24,7 +24,7 @@
         <connection>scm:git:git@github.com:Graylog2/graylog-plugin-twitter.git</connection>
         <developerConnection>scm:git:git@github.com:Graylog2/graylog-plugin-twitter.git</developerConnection>
         <url>https://github.com/Graylog2/graylog-plugin-twitter</url>
-        <tag>2.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
