@@ -1,7 +1,9 @@
 Twitter Plugin for Graylog
 ==========================
 
-[![Build Status](https://travis-ci.org/Graylog2/graylog-plugin-twitter.svg)](https://travis-ci.org/Graylog2/graylog-plugin-twitter)
+[![Github Downloads](https://img.shields.io/github/downloads/graylog-labs/graylog-plugin-twitter/total.svg)](https://github.com/graylog-labs/graylog-plugin-twitter/releases)
+[![GitHub Release](https://img.shields.io/github/release/graylog-labs/graylog-plugin-twitter.svg)](https://github.com/graylog-labs/graylog-plugin-twitter/releases)
+[![Build Status](https://travis-ci.org/graylog-labs/graylog-plugin-twitter.svg)](https://travis-ci.org/graylog-labs/graylog-plugin-twitter)
 
 Graylog input plugin that reads twitter messages based on keywords in real-time.
 
@@ -9,7 +11,7 @@ Graylog input plugin that reads twitter messages based on keywords in real-time.
 
 ## Installation
 
-[Download the plugin](https://github.com/Graylog2/graylog-plugin-twitter/releases)
+[Download the plugin](https://github.com/graylog-labs/graylog-plugin-twitter/releases)
 and place the `.jar` file in your Graylog plugin directory. The plugin directory
 is the `plugins/` folder relative from your `graylog-server` directory by default
 and can be configured in your `graylog.conf` file.
